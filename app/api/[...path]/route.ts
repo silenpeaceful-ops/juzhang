@@ -27,7 +27,7 @@ function manualTransaction(input:Record<string,unknown>,old?:Transaction):Transa
   const direction=input.direction??old?.direction??'expense';
   if(!directions.includes(String(direction)))throw new Error('收支类型无效');
   const merchant=safeText(input.merchant??old?.merchant,100)||'未填写商户';
-  return {id:old?.id||crypto.randomUUID(),...dateTime(input.occurredAt??old?.occurredAt),amountCents:amount,direction:direction as Direction,channel:channel(input.channel??old?.channel)||'other',merchant,category:safeText(input.category??old?.category,40)||classifyTransaction(merchant,direction as Direction),paymentMethod:safeText(input.paymentMethod??old?.paymentMethod,100),rawText:old?.rawText||'',externalId:old?.externalId||'',entryType:old?.entryType||'manual',status:old?.status||'confirmed'};
+  return {id:old?.id||crypto.randomUUID(),...dateTime(input.occurredAt??old?.occurredAt),amountCents:amount,direction:direction as Direction,channel:channel(input.channel??old?.channel)||'other',merchant,category:safeText(input.category??old?.category,40)||classifyTransaction(merchant,direction as Direction),paymentMethod:safeText(input.paymentMethod??old?.paymentMethod,100),rawText:old?.rawText||'',externalId:old?.externalId||'',entryType:old?.entryType||'manual',status:old?.status||'confirmed',...(old?.reviewReason?{reviewReason:old.reviewReason}:{}),...(old?.duplicateOf?{duplicateOf:old.duplicateOf}:{})};
 }
 async function body(request:Request):Promise<Record<string,unknown>> {
   if(Number(request.headers.get('content-length')||0)>3_000_000)throw new Error('内容过大，请分批导入');
