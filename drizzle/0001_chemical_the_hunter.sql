@@ -1,0 +1,1 @@
+ALTER TABLE `ledger_deliveries` ADD `claim_token` text;
