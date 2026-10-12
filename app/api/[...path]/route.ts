@@ -46,6 +46,10 @@ async function handle(request:Request):Promise<Response> {
     // Service access is supplied by the private Sites gate. Only narrowly scoped
     // ingestion and reporting operations may use that identity-less access.
     if(service&&!['ingest','run-daily','report','health'].includes(path))return json({error:'该接口需要网页登录'},403);
+    if(service&&path==='run-daily') {
+      const initialized=await db().prepare('SELECT value FROM ledger_metadata WHERE key=?').bind('owner').first();
+      if(!initialized)return json({ok:true,skipped:true,reason:'请先登录并打开账本，再启用微信清单'});
+    }
     const owner=await ownerKey(user?.userId);
     if(method==='GET'&&path==='health')return json({ok:true,day:chinaDate()});
     if(method==='GET'&&path==='state')return json({transactions:await listTransactions(owner),settings:await getSettings(owner)});
