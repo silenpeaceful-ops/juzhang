@@ -41,6 +41,51 @@ assert.equal(transaction("支付宝：向本人转账100.00元").direction, "tra
 assert.equal(transaction("微信支付：向张三转账20.00元").status, "review");
 assert.equal(parseNotification("微信支付：消费成功，余额人民币100.00元").transaction, undefined);
 
+const failedTransfers = [
+  "微信支付：转账失败，金额20.00元",
+  "支付宝：充值失败，金额100.00元",
+  "微信支付：提现失败，金额100.00元",
+  "招商银行：信用卡还款失败，金额100.00元",
+].map((text) => parseNotification(text, { occurredAt }));
+for (const result of failedTransfers) {
+  assert.equal(result.ignored, true, "失败的转账、充值、提现和还款不得入账");
+  assert.equal(result.transaction, undefined);
+}
+const pendingTransfers = [
+  "微信支付：张三向你转账20.00元，未收款",
+  "微信支付：收到张三转账20.00元，待收款",
+  "微信支付：向张三转账20.00元，等待对方收款",
+  "招商银行：转账入账人民币100.00元，尚未到账",
+  "招商银行：转入人民币100.00元，交易处理中",
+  "支付宝：充值处理中，金额100.00元",
+  "支付宝：充值100.00元，未完成",
+].map((text) => transaction(text));
+for (const record of pendingTransfers) {
+  assert.equal(record.status, "review", "尚未完成的交易只能待核对");
+  assert.match(record.reviewReason || "", /未完成|未到账/);
+}
+const transferCredits = [
+  "招商银行：转账入账人民币100.00元",
+  "招商银行：转账收入人民币50.00元",
+  "微信支付：你已收款，转账金额20.00元",
+  "微信支付：您已经收款，转账金额20.00元",
+].map((text) => transaction(text));
+for (const record of transferCredits) {
+  assert.equal(record.direction, "income");
+  assert.equal(record.status, "confirmed");
+}
+const counterpartyReceipt = transaction("微信支付：向张三转账20.00元，对方已收款");
+assert.equal(counterpartyReceipt.direction, "expense");
+assert.equal(counterpartyReceipt.status, "review", "收款完成不代表转账用途明确");
+assert.equal(parseNotification("微信支付：对方已收款20.00元").transaction, undefined);
+assert.equal(parseNotification("微信支付：对方收款成功20.00元").transaction, undefined);
+assert.equal(transaction("微信支付：收款成功20.00元").direction, "income");
+assert.equal(transaction("微信支付：收到张三转账20.00元").status, "review", "收到转账提醒不等于已领取到账");
+const transferSafetyReport = buildDailyReport([...pendingTransfers, ...transferCredits, counterpartyReceipt], "2026-10-12");
+assert.deepEqual(transferSafetyReport.totals, { expenseCents: 0, incomeCents: 19000, count: 4 });
+assert.equal(transferSafetyReport.transactions.length, 4, "待收款与处理中记录不得进入已确认明细");
+assert.ok(transferSafetyReport.content.includes("8 笔待确认"));
+
 const retry = transaction(meal.rawText);
 assert.equal(detectDuplicate(retry, [meal]).duplicate, true);
 const otherTimeSameOrder = transaction(meal.rawText, "2026-10-12T13:30:00+08:00");

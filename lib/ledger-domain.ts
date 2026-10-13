@@ -131,19 +131,26 @@ export function classifyTransaction(text: string, direction: Direction): string 
   if (direction === "income") return /退款|退回|退还/.test(text) ? "退款" : /工资|薪资|奖金/.test(text) ? "工资" : "其他收入";
   return categoryRules.find(([, pattern]) => pattern.test(text))?.[0] || "其他";
 }
-const failedPattern = /支付失败|交易失败|交易关闭|已关闭|已取消|已撤销|已作废|扣款失败|付款失败/;
+const failedPattern = /支付失败|交易失败|交易关闭|已关闭|已取消|已撤销|已作废|扣款失败|付款失败|转账失败|充值失败|提现失败|还款失败/;
 const transferPattern = /信用卡还款|花呗还款|借呗还款|还花呗|向本人|向自己|本人账户|自己账户|本人转账|账户间转账|转入零钱|零钱充值|充值到零钱|余额充值|支付宝充值|微信零钱充值|(?:^|[:： ，])充值(?:成功)?|提现|零钱提现|转到银行卡/;
 const refundPattern = /退款(?:成功|到账)|已退款|已退回|已退还|全额退款|退款收入/;
+const pendingTransactionPattern = /未收款|待收款|等待[^，。;；\n]{0,12}收款|尚未到账|未到账|处理中|未完成/;
 function inferDirection(text: string): { direction?: Direction; reviewReason?: string } {
+  const pendingReason = pendingTransactionPattern.test(text) ? "交易尚未完成或资金未到账，请核对交易状态" : undefined;
   if (/退款申请|退款中|等待退款|退款处理中/.test(text) && !refundPattern.test(text)) return { direction: "expense", reviewReason: "退款尚未到账，请核对交易状态" };
-  if (refundPattern.test(text)) return { direction: "income" };
-  if (transferPattern.test(text)) return { direction: "transfer" };
+  if (refundPattern.test(text)) return { direction: "income", reviewReason: pendingReason };
+  if (transferPattern.test(text)) return { direction: "transfer", reviewReason: pendingReason };
   if (/退款申请|退款中|部分退款/.test(text)) return { direction: "expense", reviewReason: "退款金额或状态需要核对" };
-  if (/转账/.test(text)) return { direction: "expense", reviewReason: "转账用途需要确认，可能是消费或账户转移" };
+  // A transfer invitation is not received income; require an explicit credit or
+  // receipt by the owner before the generic transfer branch.
+  if (/转账(?:入账|收入)|(?:你|您|本人)(?:已|已经)收款/.test(text)) return { direction: "income", reviewReason: pendingReason };
+  if (/转账/.test(text)) return { direction: "expense", reviewReason: pendingReason || "转账用途需要确认，可能是消费或账户转移" };
   // Strip app names so the word 支付 in 微信支付 does not imply a transaction.
   const core = text.replace(/微信支付|支付宝|云闪付/g, "");
-  if (/收入|收款(?:成功|到账)|已收款|收到.*(?:元|¥|￥)|工资|薪资|奖金|退款|转入.*(?:元|¥|￥)|入账/.test(core)) return { direction: "income" };
-  if (/消费|支出|已支付|已付款|支付成功|付款成功|扣款|扣费|代扣|缴费成功|向.+(?:付款|支付)|支付了/.test(core)) return { direction: "expense" };
+  // A counterparty's receipt confirms their receipt, not income for the owner.
+  const incomeCore = core.replace(/(?:对方|收款方|收款人|收款账户)(?:已经|已)?收款(?:成功|到账)?/g, "");
+  if (/收入|收款(?:成功|到账)|已收款|收到.*(?:元|¥|￥)|工资|薪资|奖金|退款|转入.*(?:元|¥|￥)|入账/.test(incomeCore)) return { direction: "income", reviewReason: pendingReason };
+  if (/消费|支出|已支付|已付款|支付成功|付款成功|扣款|扣费|代扣|缴费成功|向.+(?:付款|支付)|支付了/.test(core)) return { direction: "expense", reviewReason: pendingReason };
   return {};
 }
 function extractAmount(text: string): number | null {
