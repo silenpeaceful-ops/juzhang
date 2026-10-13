@@ -1,0 +1,630 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T05:20:30.112690+00:00",
+  "title": "Design System: 聚账",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "操作蓝",
+        "tonalRamp": [
+          "oklch(15% 0.19130 257.13)",
+          "oklch(26% 0.19130 257.13)",
+          "oklch(37% 0.19130 257.13)",
+          "oklch(48% 0.19130 257.13)",
+          "oklch(59% 0.19130 257.13)",
+          "oklch(70% 0.19130 257.13)",
+          "oklch(82% 0.19130 257.13)",
+          "oklch(95% 0.19130 257.13)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "primary-hover",
+        "tonalRamp": [
+          "oklch(15% 0.17093 256.75)",
+          "oklch(26% 0.17093 256.75)",
+          "oklch(37% 0.17093 256.75)",
+          "oklch(48% 0.17093 256.75)",
+          "oklch(59% 0.17093 256.75)",
+          "oklch(70% 0.17093 256.75)",
+          "oklch(82% 0.17093 256.75)",
+          "oklch(95% 0.17093 256.75)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "accent",
+        "tonalRamp": [
+          "oklch(15% 0.01827 258.35)",
+          "oklch(26% 0.01827 258.35)",
+          "oklch(37% 0.01827 258.35)",
+          "oklch(48% 0.01827 258.35)",
+          "oklch(59% 0.01827 258.35)",
+          "oklch(70% 0.01827 258.35)",
+          "oklch(82% 0.01827 258.35)",
+          "oklch(95% 0.01827 258.35)"
+        ]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "工作区灰",
+        "tonalRamp": [
+          "oklch(15% 0.00265 286.35)",
+          "oklch(26% 0.00265 286.35)",
+          "oklch(37% 0.00265 286.35)",
+          "oklch(48% 0.00265 286.35)",
+          "oklch(59% 0.00265 286.35)",
+          "oklch(70% 0.00265 286.35)",
+          "oklch(82% 0.00265 286.35)",
+          "oklch(95% 0.00265 286.35)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "内容白",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26% 0.00000 0.00)",
+          "oklch(37% 0.00000 0.00)",
+          "oklch(48% 0.00000 0.00)",
+          "oklch(59% 0.00000 0.00)",
+          "oklch(70% 0.00000 0.00)",
+          "oklch(82% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "navigation": {
+        "role": "neutral",
+        "displayName": "navigation",
+        "tonalRamp": [
+          "oklch(15% 0.00132 286.38)",
+          "oklch(26% 0.00132 286.38)",
+          "oklch(37% 0.00132 286.38)",
+          "oklch(48% 0.00132 286.38)",
+          "oklch(59% 0.00132 286.38)",
+          "oklch(70% 0.00132 286.38)",
+          "oklch(82% 0.00132 286.38)",
+          "oklch(95% 0.00132 286.38)"
+        ]
+      },
+      "secondary": {
+        "role": "neutral",
+        "displayName": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.00400 286.32)",
+          "oklch(26% 0.00400 286.32)",
+          "oklch(37% 0.00400 286.32)",
+          "oklch(48% 0.00400 286.32)",
+          "oklch(59% 0.00400 286.32)",
+          "oklch(70% 0.00400 286.32)",
+          "oklch(82% 0.00400 286.32)",
+          "oklch(95% 0.00400 286.32)"
+        ]
+      },
+      "surface-secondary": {
+        "role": "neutral",
+        "displayName": "surface-secondary",
+        "tonalRamp": [
+          "oklch(15% 0.00399 286.32)",
+          "oklch(26% 0.00399 286.32)",
+          "oklch(37% 0.00399 286.32)",
+          "oklch(48% 0.00399 286.32)",
+          "oklch(59% 0.00399 286.32)",
+          "oklch(70% 0.00399 286.32)",
+          "oklch(82% 0.00399 286.32)",
+          "oklch(95% 0.00399 286.32)"
+        ]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "foreground",
+        "tonalRamp": [
+          "oklch(15% 0.00381 286.10)",
+          "oklch(26% 0.00381 286.10)",
+          "oklch(37% 0.00381 286.10)",
+          "oklch(48% 0.00381 286.10)",
+          "oklch(59% 0.00381 286.10)",
+          "oklch(70% 0.00381 286.10)",
+          "oklch(82% 0.00381 286.10)",
+          "oklch(95% 0.00381 286.10)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "ink-soft",
+        "tonalRamp": [
+          "oklch(15% 0.00825 286.03)",
+          "oklch(26% 0.00825 286.03)",
+          "oklch(37% 0.00825 286.03)",
+          "oklch(48% 0.00825 286.03)",
+          "oklch(59% 0.00825 286.03)",
+          "oklch(70% 0.00825 286.03)",
+          "oklch(82% 0.00825 286.03)",
+          "oklch(95% 0.00825 286.03)"
+        ]
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "muted-foreground",
+        "tonalRamp": [
+          "oklch(15% 0.00470 286.23)",
+          "oklch(26% 0.00470 286.23)",
+          "oklch(37% 0.00470 286.23)",
+          "oklch(48% 0.00470 286.23)",
+          "oklch(59% 0.00470 286.23)",
+          "oklch(70% 0.00470 286.23)",
+          "oklch(82% 0.00470 286.23)",
+          "oklch(95% 0.00470 286.23)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "border",
+        "tonalRamp": [
+          "oklch(15% 0.00679 286.26)",
+          "oklch(26% 0.00679 286.26)",
+          "oklch(37% 0.00679 286.26)",
+          "oklch(48% 0.00679 286.26)",
+          "oklch(59% 0.00679 286.26)",
+          "oklch(70% 0.00679 286.26)",
+          "oklch(82% 0.00679 286.26)",
+          "oklch(95% 0.00679 286.26)"
+        ]
+      },
+      "income": {
+        "role": "semantic",
+        "displayName": "income",
+        "tonalRamp": [
+          "oklch(15% 0.11625 152.31)",
+          "oklch(26% 0.11625 152.31)",
+          "oklch(37% 0.11625 152.31)",
+          "oklch(48% 0.11625 152.31)",
+          "oklch(59% 0.11625 152.31)",
+          "oklch(70% 0.11625 152.31)",
+          "oklch(82% 0.11625 152.31)",
+          "oklch(95% 0.11625 152.31)"
+        ]
+      },
+      "destructive": {
+        "role": "semantic",
+        "displayName": "destructive",
+        "tonalRamp": [
+          "oklch(15% 0.18205 29.51)",
+          "oklch(26% 0.18205 29.51)",
+          "oklch(37% 0.18205 29.51)",
+          "oklch(48% 0.18205 29.51)",
+          "oklch(59% 0.18205 29.51)",
+          "oklch(70% 0.18205 29.51)",
+          "oklch(82% 0.18205 29.51)",
+          "oklch(95% 0.18205 29.51)"
+        ]
+      },
+      "destructive-hover": {
+        "role": "semantic",
+        "displayName": "destructive-hover",
+        "tonalRamp": [
+          "oklch(15% 0.15670 29.43)",
+          "oklch(26% 0.15670 29.43)",
+          "oklch(37% 0.15670 29.43)",
+          "oklch(48% 0.15670 29.43)",
+          "oklch(59% 0.15670 29.43)",
+          "oklch(70% 0.15670 29.43)",
+          "oklch(82% 0.15670 29.43)",
+          "oklch(95% 0.15670 29.43)"
+        ]
+      },
+      "danger-surface": {
+        "role": "semantic",
+        "displayName": "danger-surface",
+        "tonalRamp": [
+          "oklch(15% 0.01650 26.65)",
+          "oklch(26% 0.01650 26.65)",
+          "oklch(37% 0.01650 26.65)",
+          "oklch(48% 0.01650 26.65)",
+          "oklch(59% 0.01650 26.65)",
+          "oklch(70% 0.01650 26.65)",
+          "oklch(82% 0.01650 26.65)",
+          "oklch(95% 0.01650 26.65)"
+        ]
+      },
+      "danger-surface-hover": {
+        "role": "semantic",
+        "displayName": "danger-surface-hover",
+        "tonalRamp": [
+          "oklch(15% 0.03396 29.00)",
+          "oklch(26% 0.03396 29.00)",
+          "oklch(37% 0.03396 29.00)",
+          "oklch(48% 0.03396 29.00)",
+          "oklch(59% 0.03396 29.00)",
+          "oklch(70% 0.03396 29.00)",
+          "oklch(82% 0.03396 29.00)",
+          "oklch(95% 0.03396 29.00)"
+        ]
+      },
+      "outline-hover": {
+        "role": "neutral",
+        "displayName": "outline-hover",
+        "tonalRamp": [
+          "oklch(15% 0.00399 286.32)",
+          "oklch(26% 0.00399 286.32)",
+          "oklch(37% 0.00399 286.32)",
+          "oklch(48% 0.00399 286.32)",
+          "oklch(59% 0.00399 286.32)",
+          "oklch(70% 0.00399 286.32)",
+          "oklch(82% 0.00399 286.32)",
+          "oklch(95% 0.00399 286.32)"
+        ]
+      },
+      "outline-hover-border": {
+        "role": "neutral",
+        "displayName": "outline-hover-border",
+        "tonalRamp": [
+          "oklch(15% 0.00974 286.18)",
+          "oklch(26% 0.00974 286.18)",
+          "oklch(37% 0.00974 286.18)",
+          "oklch(48% 0.00974 286.18)",
+          "oklch(59% 0.00974 286.18)",
+          "oklch(70% 0.00974 286.18)",
+          "oklch(82% 0.00974 286.18)",
+          "oklch(95% 0.00974 286.18)"
+        ]
+      },
+      "review-surface": {
+        "role": "neutral",
+        "displayName": "review-surface",
+        "tonalRamp": [
+          "oklch(15% 0.00534 286.30)",
+          "oklch(26% 0.00534 286.30)",
+          "oklch(37% 0.00534 286.30)",
+          "oklch(48% 0.00534 286.30)",
+          "oklch(59% 0.00534 286.30)",
+          "oklch(70% 0.00534 286.30)",
+          "oklch(82% 0.00534 286.30)",
+          "oklch(95% 0.00534 286.30)"
+        ]
+      },
+      "selected-border": {
+        "role": "primary",
+        "displayName": "selected-border",
+        "tonalRamp": [
+          "oklch(15% 0.05564 256.81)",
+          "oklch(26% 0.05564 256.81)",
+          "oklch(37% 0.05564 256.81)",
+          "oklch(48% 0.05564 256.81)",
+          "oklch(59% 0.05564 256.81)",
+          "oklch(70% 0.05564 256.81)",
+          "oklch(82% 0.05564 256.81)",
+          "oklch(95% 0.05564 256.81)"
+        ]
+      },
+      "count-surface": {
+        "role": "neutral",
+        "displayName": "count-surface",
+        "tonalRamp": [
+          "oklch(15% 0.00674 286.27)",
+          "oklch(26% 0.00674 286.27)",
+          "oklch(37% 0.00674 286.27)",
+          "oklch(48% 0.00674 286.27)",
+          "oklch(59% 0.00674 286.27)",
+          "oklch(70% 0.00674 286.27)",
+          "oklch(82% 0.00674 286.27)",
+          "oklch(95% 0.00674 286.27)"
+        ]
+      },
+      "chart-bar": {
+        "role": "neutral",
+        "displayName": "chart-bar",
+        "tonalRamp": [
+          "oklch(15% 0.01240 259.82)",
+          "oklch(26% 0.01240 259.82)",
+          "oklch(37% 0.01240 259.82)",
+          "oklch(48% 0.01240 259.82)",
+          "oklch(59% 0.01240 259.82)",
+          "oklch(70% 0.01240 259.82)",
+          "oklch(82% 0.01240 259.82)",
+          "oklch(95% 0.01240 259.82)"
+        ]
+      },
+      "chart-current": {
+        "role": "neutral",
+        "displayName": "chart-current",
+        "tonalRamp": [
+          "oklch(15% 0.02976 257.68)",
+          "oklch(26% 0.02976 257.68)",
+          "oklch(37% 0.02976 257.68)",
+          "oklch(48% 0.02976 257.68)",
+          "oklch(59% 0.02976 257.68)",
+          "oklch(70% 0.02976 257.68)",
+          "oklch(82% 0.02976 257.68)",
+          "oklch(95% 0.02976 257.68)"
+        ]
+      },
+      "chart-category-1": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 1",
+        "tonalRamp": [
+          "oklch(15% 0.03055 257.68)",
+          "oklch(26% 0.03055 257.68)",
+          "oklch(37% 0.03055 257.68)",
+          "oklch(48% 0.03055 257.68)",
+          "oklch(59% 0.03055 257.68)",
+          "oklch(70% 0.03055 257.68)",
+          "oklch(82% 0.03055 257.68)",
+          "oklch(95% 0.03055 257.68)"
+        ]
+      },
+      "chart-category-2": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 2",
+        "tonalRamp": [
+          "oklch(15% 0.02950 257.06)",
+          "oklch(26% 0.02950 257.06)",
+          "oklch(37% 0.02950 257.06)",
+          "oklch(48% 0.02950 257.06)",
+          "oklch(59% 0.02950 257.06)",
+          "oklch(70% 0.02950 257.06)",
+          "oklch(82% 0.02950 257.06)",
+          "oklch(95% 0.02950 257.06)"
+        ]
+      },
+      "chart-category-3": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 3",
+        "tonalRamp": [
+          "oklch(15% 0.02122 257.49)",
+          "oklch(26% 0.02122 257.49)",
+          "oklch(37% 0.02122 257.49)",
+          "oklch(48% 0.02122 257.49)",
+          "oklch(59% 0.02122 257.49)",
+          "oklch(70% 0.02122 257.49)",
+          "oklch(82% 0.02122 257.49)",
+          "oklch(95% 0.02122 257.49)"
+        ]
+      },
+      "chart-category-4": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 4",
+        "tonalRamp": [
+          "oklch(15% 0.01235 259.82)",
+          "oklch(26% 0.01235 259.82)",
+          "oklch(37% 0.01235 259.82)",
+          "oklch(48% 0.01235 259.82)",
+          "oklch(59% 0.01235 259.82)",
+          "oklch(70% 0.01235 259.82)",
+          "oklch(82% 0.01235 259.82)",
+          "oklch(95% 0.01235 259.82)"
+        ]
+      },
+      "chart-category-5": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 5",
+        "tonalRamp": [
+          "oklch(15% 0.02035 253.44)",
+          "oklch(26% 0.02035 253.44)",
+          "oklch(37% 0.02035 253.44)",
+          "oklch(48% 0.02035 253.44)",
+          "oklch(59% 0.02035 253.44)",
+          "oklch(70% 0.02035 253.44)",
+          "oklch(82% 0.02035 253.44)",
+          "oklch(95% 0.02035 253.44)"
+        ]
+      },
+      "chart-category-6": {
+        "role": "neutral",
+        "displayName": "分类灰蓝 6",
+        "tonalRamp": [
+          "oklch(15% 0.01628 260.72)",
+          "oklch(26% 0.01628 260.72)",
+          "oklch(37% 0.01628 260.72)",
+          "oklch(48% 0.01628 260.72)",
+          "oklch(59% 0.01628 260.72)",
+          "oklch(70% 0.01628 260.72)",
+          "oklch(82% 0.01628 260.72)",
+          "oklch(95% 0.01628 260.72)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "主金额",
+        "purpose": "本月总支出；手机为52px，小手机为48px。"
+      },
+      "headline": {
+        "displayName": "页面标题",
+        "purpose": "四页的首级标题。"
+      },
+      "dialog": {
+        "displayName": "弹窗标题",
+        "purpose": "记账、导入与删除确认。"
+      },
+      "title": {
+        "displayName": "分组标题",
+        "purpose": "普通内容容器标题。"
+      },
+      "body": {
+        "displayName": "正文",
+        "purpose": "默认中文正文与字体栈。"
+      },
+      "control": {
+        "displayName": "按钮文字",
+        "purpose": "标准动作。"
+      },
+      "label": {
+        "displayName": "辅助信息",
+        "purpose": "来源、状态、时间和说明。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "switch-thumb",
+        "value": "0 1px 3px #00000026",
+        "purpose": "开关滑块。"
+      },
+      {
+        "name": "segmented-selected",
+        "value": "0 2px 4px #0000000b",
+        "purpose": "选中分段。"
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 26px #00000021",
+        "purpose": "固定提示条。"
+      },
+      {
+        "name": "modal",
+        "value": "0 20px 60px #00000025",
+        "purpose": "模态对话框。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "160ms ease-out",
+        "purpose": "按钮背景、文字和边线颜色。"
+      },
+      {
+        "name": "switch-transition",
+        "value": "180ms ease-out",
+        "purpose": "开关轨道颜色与滑块位移。"
+      },
+      {
+        "name": "chart-transition",
+        "value": "240ms ease-out",
+        "purpose": "支出趋势柱高度。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "关闭过渡、动画和滚动效果。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1200px"
+      },
+      {
+        "name": "stacked-content",
+        "value": "1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "420px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "主按钮",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "标准动作，保留至少44px高度与可见键盘焦点。",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">保存账单</button>",
+      "css": ".ds-button-primary{min-height:44px;padding:11px 17px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;line-height:1.35;font-weight:550;border:0;cursor:pointer;transition:background-color .16s ease-out,color .16s ease-out,border-color .16s ease-out;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;background:var(--primary,#0068d9);color:var(--primary-foreground,#fff);}.ds-button-primary:hover:not(:disabled){background:#005bbd;}.ds-button-primary:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}.ds-button-primary:disabled{cursor:default;opacity:.45;}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none;}}"
+    },
+    {
+      "name": "次按钮",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "标准动作，保留至少44px高度与可见键盘焦点。",
+      "html": "<button type=\"button\" class=\"ds-button-outline\">导出</button>",
+      "css": ".ds-button-outline{min-height:44px;padding:11px 17px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;line-height:1.35;font-weight:550;border:0;cursor:pointer;transition:background-color .16s ease-out,color .16s ease-out,border-color .16s ease-out;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;background:var(--card,#fff);color:var(--foreground,#1d1d1f);border:1px solid var(--border,#d9d9de);}.ds-button-outline:hover:not(:disabled){background:#f0f0f3;border-color:#bfbfc6;}.ds-button-outline:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}.ds-button-outline:disabled{cursor:default;opacity:.45;}@media(prefers-reduced-motion:reduce){.ds-button-outline{transition:none;}}"
+    },
+    {
+      "name": "删除按钮",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "标准动作，保留至少44px高度与可见键盘焦点。",
+      "html": "<button type=\"button\" class=\"ds-button-danger\">删除账单</button>",
+      "css": ".ds-button-danger{min-height:44px;padding:11px 17px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14px;line-height:1.35;font-weight:550;border:0;cursor:pointer;transition:background-color .16s ease-out,color .16s ease-out,border-color .16s ease-out;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;background:#fff0ee;color:var(--destructive,#b42318);}.ds-button-danger:hover:not(:disabled){background:#ffe1dc;}.ds-button-danger:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}.ds-button-danger:disabled{cursor:default;opacity:.45;}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition:none;}}"
+    },
+    {
+      "name": "表单字段",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "标签与输入分开，手机使用16px输入字号。",
+      "html": "<label class=\"ds-field\"><span>商户 / 说明</span><input placeholder=\"这笔钱花在哪里？\" /></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:8px;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;}.ds-field>span{color:var(--ink-soft,#4a4a4f);font-size:13px;font-weight:500;}.ds-field input{min-width:0;min-height:46px;border:1px solid var(--border,#d9d9de);border-radius:10px;padding:11px 12px;background:var(--card,#fff);color:var(--foreground,#1d1d1f);font-size:14px;caret-color:var(--primary,#0068d9);font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;}.ds-field input::placeholder{color:var(--muted-foreground,#636366);opacity:1;}.ds-field input:focus{outline:2px solid var(--ring,#0068d9);outline-offset:1px;}@media(max-width:760px){.ds-field input{font-size:16px;}}"
+    },
+    {
+      "name": "侧栏导航",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "纵向导航，选中用浅蓝背景、蓝色文字与加重字重。",
+      "html": "<nav class=\"ds-nav\" aria-label=\"账本导航\"><button class=\"ds-nav-item ds-active\" aria-current=\"page\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg><span>概览</span></button><button class=\"ds-nav-item\"><span>账单</span></button></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:5px;max-width:208px;}.ds-nav-item{min-height:48px;border-radius:10px;display:flex;align-items:center;gap:12px;padding:0 14px;text-align:left;color:var(--ink-soft,#4a4a4f);font-size:14px;border:0;background:none;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;transition:background-color .16s ease-out,color .16s ease-out;}.ds-nav-item:hover{background:#ededf0;}.ds-nav-item.ds-active{color:var(--primary,#0068d9);background:var(--accent,#eaf2fe);font-weight:600;}.ds-nav-item:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}@media(prefers-reduced-motion:reduce){.ds-nav-item{transition:none;}}"
+    },
+    {
+      "name": "待核对筛选",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "可操作筛选带中性计数；选中同时改变面色、文字和描边。",
+      "html": "<button class=\"ds-chip ds-selected\" aria-pressed=\"true\">待核对 <b>3</b></button>",
+      "css": ".ds-chip{min-height:44px;border:1px solid var(--border,#d9d9de);border-radius:9px;background:var(--card,#fff);color:var(--ink-soft,#4a4a4f);display:inline-flex;align-items:center;gap:7px;padding:0 13px;font-size:13px;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;transition:background-color .16s ease-out,color .16s ease-out,border-color .16s ease-out;}.ds-chip.ds-selected{border-color:#bed7fa;background:var(--accent,#eaf2fe);color:var(--primary,#0068d9);}.ds-chip b{border-radius:5px;padding:1px 5px;background:#e1e1e6;color:var(--ink-soft,#4a4a4f);font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;}.ds-chip:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}@media(prefers-reduced-motion:reduce){.ds-chip{transition:none;}}"
+    },
+    {
+      "name": "内容容器",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "白色平面内容分组，以圆角和间距组织，不使用默认阴影。",
+      "html": "<section class=\"ds-panel\"><h2>近 7 天支出</h2><p>日常消费的节奏</p></section>",
+      "css": ".ds-panel{min-width:0;background:var(--card,#fff);color:var(--foreground,#1d1d1f);border-radius:16px;padding:24px;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;}.ds-panel h2{margin:0;font-size:17px;font-weight:600;line-height:1.4;letter-spacing:-.015em;}.ds-panel p{margin:7px 0 0;color:var(--muted-foreground,#636366);font-size:12px;line-height:1.7;}@media(max-width:1200px){.ds-panel{padding:22px;}}@media(max-width:420px){.ds-panel{padding:20px;}.ds-panel h2{font-size:16px;}}"
+    },
+    {
+      "name": "流水行",
+      "kind": "custom",
+      "refersTo": "transaction-row",
+      "description": "金额右对齐，删除动作单独摆放；示例为已确认支出。",
+      "html": "<div class=\"ds-row\"><span class=\"ds-channel\" aria-label=\"微信支付\">微</span><button class=\"ds-main\"><strong>一杯咖啡</strong><span>微信支付 · 餐饮</span></button><div class=\"ds-amount\"><strong>− ¥26.00</strong><span>12:30</span></div><svg class=\"ds-row-chevron\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg><button class=\"ds-delete\" aria-label=\"删除一杯咖啡账单\">删除</button></div>",
+      "css": ".ds-row{display:grid;grid-template-columns:38px minmax(0,1fr) minmax(90px,max-content) 32px 64px;align-items:center;gap:12px;padding:18px 0;border-bottom:1px solid var(--border,#d9d9de);font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;}.ds-channel{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft,#4a4a4f);background:var(--surface-secondary,#f2f2f5);font-size:15px;font-weight:600;}.ds-main{min-width:0;min-height:44px;text-align:left;padding:0;border:0;background:none;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;}.ds-main strong{display:block;color:var(--foreground,#1d1d1f);font-size:15px;line-height:1.5;font-weight:550;overflow-wrap:anywhere;}.ds-main span,.ds-amount span{display:block;margin-top:4px;color:var(--muted-foreground,#636366);font-size:12px;line-height:1.7;overflow-wrap:anywhere;}.ds-amount{text-align:right;max-width:170px;}.ds-amount strong{display:block;color:var(--foreground,#1d1d1f);font-size:16px;font-weight:600;letter-spacing:-.015em;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;}.ds-row-chevron{color:var(--muted-foreground,#636366);justify-self:center;}.ds-delete{min-width:64px;min-height:44px;padding:0 8px;border-radius:9px;border:0;display:flex;align-items:center;justify-content:center;color:var(--destructive,#b42318);background:#fff0ee;font-size:12px;font-weight:500;cursor:pointer;font-family:-apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetica Neue\", \"Microsoft YaHei\", sans-serif;transition:background-color .16s ease-out;}.ds-delete:hover{background:#ffe1dc;}.ds-main:focus-visible,.ds-delete:focus-visible{outline:3px solid var(--ring,#0068d9);outline-offset:3px;}@media(max-width:1000px){.ds-row{grid-template-columns:38px minmax(0,1fr) minmax(88px,max-content) 64px;gap:10px;}.ds-row-chevron{display:none;}}@media(max-width:760px){.ds-row{grid-template-columns:36px minmax(0,1fr) minmax(88px,max-content);gap:8px 10px;align-items:start;}.ds-channel{grid-column:1;grid-row:1;width:36px;height:36px;}.ds-main{grid-column:2;grid-row:1/3;}.ds-amount{grid-column:3;grid-row:1;max-width:132px;}.ds-delete{grid-column:3;grid-row:2;justify-self:end;}}@media(prefers-reduced-motion:reduce){.ds-delete{transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "overview": "用户确认的方向是「苹果风格：白灰、简洁」。浅灰工作区承托白色内容面，系统字体和清楚的数字层级适合个人消费账本。已实现的界面以间距、对齐和中性色区分信息，用少量颜色表达操作与交易含义。操作蓝仅用于动作、选中与焦点，图表保持灰蓝色。\n\n这份文档记录 `app/globals.css` 与 `app/ledger-client.tsx` 的实际设计。四页共用同一套控件与容器；手机以内容单列和底部导航为主，桌面保留侧栏。没有额外命名的视觉隐喻。",
+    "keyCharacteristics": [
+      "白灰底色与白色分组容器。",
+      "系统字体、中文内容与等宽数字。",
+      "金额优先，辅助说明退后一级。",
+      "控件保留明确的焦点状态和足够的手机触点。"
+    ],
+    "rules": [
+      {
+        "name": "操作与含义",
+        "body": "保持收入、删除与选中状态的颜色语义；不能依靠颜色单独表达状态，文字、金额符号或标签须同时存在。",
+        "section": "colors"
+      },
+      {
+        "name": "数字清晰",
+        "body": "金额、时间和百分比使用等宽数字；主金额保持深色与醒目的尺寸，来源和状态置于较低层级。",
+        "section": "typography"
+      },
+      {
+        "name": "手机可操作",
+        "body": "标准动作最小高度为 44px，表单输入最小高度为 46px；≤760px 的普通输入、选择和文本域使用 16px 字号。",
+        "section": "layout"
+      },
+      {
+        "name": "静止分组",
+        "body": "普通内容容器保持平面；阴影只复用在已有的状态控件与浮层角色中。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 以白灰材质、间距和对齐建立分组。",
+      "**Do** 保持金额、状态与来源的清晰层级，并使用等宽数字。",
+      "**Do** 延续手机 16px 普通字段、至少 44px 动作与可见焦点。",
+      "**Do** 用文字和控件状态同时说明颜色所表达的含义。"
+    ],
+    "donts": [
+      "**Don't** 为普通卡片增添浮层阴影或独立装饰色。",
+      "**Don't** 把收入绿或删除红用于普通选中状态。",
+      "**Don't** 将已有 12px 辅助文字继续缩小。",
+      "**Don't** 让装饰标签、展示字体或渐变抢占金额与操作的层级。"
+    ]
+  }
+}

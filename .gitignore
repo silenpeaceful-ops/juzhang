@@ -54,3 +54,13 @@ next-env.d.ts
 /.codex/
 /outputs/
 /work/
+
+# Temporary design previews and per-session state.
+/.impeccable/review/
+/.impeccable/mocks/
+/.impeccable/build/
+/.impeccable/config.local.json
+/.impeccable/*.png
+/.impeccable/*.jpg
+/.impeccable/hook.cache.json
+/.impeccable/hook.pending.json
