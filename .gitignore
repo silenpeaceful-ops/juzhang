@@ -36,6 +36,14 @@ yarn-error.log*
 
 # typescript
 next-env.d.ts
+*.tsbuildinfo
+
+# Local Worker secrets, databases, and personal ledger backups.
+.dev.vars*
+*.db
+*.sqlite
+*.sqlite3
+/ledger-backups/
 
 # Maintained Vite plugin and worker sources.
 !/build/
